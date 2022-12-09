@@ -19,14 +19,23 @@ function App() {
 
 
   if (!user) {
-    return <Login setUser={setUser}></Login>;
+    return (
+      <>
+      <Login setUser={setUser}></Login>
+      <footer>
+        Copyright &copy;
+      </footer>
+      </>
+    )
   }
   return (
     <>
       <Header user={user} setUser={setUser} />
       <CreatePost user={user} posts={posts} setPosts={setPosts} />
       <PostList posts={posts}/>
-
+      <footer>
+        Copyright &copy;
+      </footer>
 
 
 
